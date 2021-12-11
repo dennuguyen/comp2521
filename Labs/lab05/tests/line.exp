@@ -1,0 +1,87 @@
+Graph has V=4 and E=3
+V    Connected to
+--   ------------
+0    1
+1    0 2
+2    1 3
+3    2
+
+> Component 0 has 0 1 2 3
+
+Graph has V=4 and E=3
+V    Connected to
+--   ------------
+0    1
+1    0 2
+2    1 3
+3    2
+
+> x=0   q=1
+x=1   q=2
+x=2   q=3
+x=3   q=
+
+Graph has V=4 and E=3
+V    Connected to
+--   ------------
+0    1
+1    0 2
+2    1 3
+3    2
+
+> x=0, q=1
+x=1, q=2
+x=2, q=3
+x=3, q=
+No path from 0 to 5
+
+Graph has V=4 and E=3
+V    Connected to
+--   ------------
+0    1
+1    0 2
+2    1 3
+3    2
+
+> x=0, q=
+Path: 1<-0
+
+Graph has V=4 and E=3
+V    Connected to
+--   ------------
+0    1
+1    0 2
+2    1 3
+3    2
+
+> 
+Graph has V=4 and E=4
+V    Connected to
+--   ------------
+0    1 3
+1    0 2
+2    1 3
+3    0 2
+
+> x=0, q=1
+Path: 3<-0
+
+Graph has V=4 and E=4
+V    Connected to
+--   ------------
+0    1 3
+1    0 2
+2    1 3
+3    0 2
+
+> Component 0 has 0 1 2 3
+
+Graph has V=4 and E=4
+V    Connected to
+--   ------------
+0    1 3
+1    0 2
+2    1 3
+3    0 2
+
+> 

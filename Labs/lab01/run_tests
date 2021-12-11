@@ -1,0 +1,55 @@
+#!/bin/sh
+
+# for t in 01 02 03 04 05 06 07 08 09 10 11 12
+# do
+#     echo === Test $t ===
+#     sort -n < tests/$t > tests/$t.expected
+#     ./useIntList < tests/$t > tests/$t.observed
+#     diff tests/$t.expected tests/$t.observed
+# done
+# rm tests/*.expected tests/*.observed
+
+for n in 25000
+do
+    for i in 1 2 3
+    do
+        echo $n
+        echo
+
+        # echo "RANDOM NO DUPS"
+        # seq $n | sort -R > /tmp/$USER.nums
+        # time ./useIntList < /tmp/$USER.nums > /dev/null
+        # time sort -n < /tmp/$USER.nums > /dev/null
+        # echo
+
+        # echo "SORTED NO DUPS"
+        # seq $n > /tmp/$USER.nums
+        # time ./useIntList < /tmp/$USER.nums > /dev/null
+        # time sort -n < /tmp/$USER.nums > /dev/null
+        # echo 
+
+        # echo "REVERSE NO DUPS"
+        # seq $n | sort -nr > /tmp/$USER.nums
+        # time ./useIntList < /tmp/$USER.nums > /dev/null
+        # time sort -n < /tmp/$USER.nums > /dev/null
+        # echo
+
+        echo "RANDOM YES DUPS"
+        ./randList $n | sort -R > /tmp/$USER.nums
+        time ./useIntList < /tmp/$USER.nums > /dev/null
+        time sort -n < /tmp/$USER.nums > /dev/null
+        echo
+
+        echo "SORTED YES DUPS"
+        ./randList $n > /tmp/$USER.nums
+        time ./useIntList < /tmp/$USER.nums > /dev/null
+        time sort -n < /tmp/$USER.nums > /dev/null
+        echo 
+
+        echo "REVERSE YES DUPS"
+        ./randList $n | sort -nr > /tmp/$USER.nums
+        time ./useIntList < /tmp/$USER.nums > /dev/null
+        time sort -n < /tmp/$USER.nums > /dev/null
+        echo
+    done
+done

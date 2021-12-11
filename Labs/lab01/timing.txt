@@ -1,0 +1,43 @@
+Input	Initial	Has	    Number	AvgTime	AvgTime
+Size	Order	Dups	of runs	forusel	forsort
+
+5000	random	no	    3	    0.08	0.00
+5000	sorted	no	    3	    0.04	0.00
+5000	reverse	no	    3	    0.03	0.00
+5000	random	yes	    3	    0.08	0.01
+5000	sorted	yes	    3	    0.08	0.00
+5000	reverse	yes	    3	    0.03	0.00
+
+10000	random	no	    3	    0.39	0.00
+10000	sorted	no	    3	    0.15	0.00
+10000	reverse	no	    3	    0.15	0.01
+10000	random	yes	    3	    0.40	0.01
+10000	sorted	yes	    3	    0.40	0.01
+10000	reverse	yes	    3	    0.15	0.01
+
+15000	random	no	    3	    1.22	0.00
+15000	sorted	no	    3	    0.34	0.00
+15000	reverse	no	    3	    0.35	0.00
+15000	random	yes	    3	    1.19	0.00
+15000	sorted	yes	    3	    1.22	0.01
+15000	reverse	yes	    3	    0.34	0.00
+
+20000	random	no	    3	    2.64	0.00
+20000	sorted	no	    3	    0.60	0.00
+20000	reverse	no	    3	    0.65	0.01
+20000	random	yes	    3	    2.57	0.01
+20000	sorted	yes	    3	    2.64	0.01
+20000	reverse	yes	    3	    0.63	0.00
+
+25000	random	no	    3	    4.75	0.01
+25000	sorted	no	    3	    0.98	0.00
+25000	reverse	no	    3	    1.00	0.00
+25000	random	yes	    3	    4.88	0.01
+25000	sorted	yes	    3	    4.98	0.01
+25000	reverse	yes	    3	    1.11	0.00
+
+As the sample size increased, the average time for ./useIntList increased. Work
+done is at worst O(n^2) because there are two nested loops for parsing the list
+and inserting into the list.
+
+The sort command is fast af.
